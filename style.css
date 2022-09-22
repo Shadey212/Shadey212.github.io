@@ -1,0 +1,69 @@
+@import url('https://fonts.googleapis.com/css2?family=Dongle:wght@300;400;700&display=swap');
+
+/* Variables */
+:root {
+    --primary-font-color: rgb(255, 255, 255);
+    --secondary-font-color-black: #000000;
+    --secondary-font-color-grey: rgb(115, 111, 111);
+    --secondary-font-color-gold: goldenrod;
+    --body-bg-white: rgb(255, 255, 255);
+    --body-bg-black: #000000;
+    --body-bg-grey: rgb(115, 111, 111);
+}
+
+/* Global config */
+html {
+    /*
+  padding: 0.5rem;
+   */
+    box-sizing: border-box;
+    --font-family: 'Open Sans', sans-serif;
+    scroll-behavior: smooth;
+    background-color: #ffffff;
+}
+
+/* Navigation */
+body {
+    display: block;
+    justify-content: center;
+    align-items: center;
+    background: var(--body-bg-white);
+}
+
+ul {
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+}
+
+ul li {
+    margin: 0.5rem;
+}
+
+ul li a {
+    position: relative;
+    display: block;
+    padding: 1rem;
+    color: var(--secondary-font-color-black);
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: 0.5s;
+}
+
+ul li a::after {
+    position: absolute;
+    content: "";
+    top: 80%;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: lightslategrey;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 1s;
+}
+
+ul li a:hover::after {
+    transform: scaleX(1);
+    transform-origin: left;
+}
