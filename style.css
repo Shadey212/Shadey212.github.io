@@ -67,3 +67,5 @@ ul li a:hover::after {
     transform: scaleX(1);
     transform-origin: left;
 }
+
+<iframe src="https://status-dev.livejourney.io" width="1000" height="800"></iframe>
