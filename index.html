@@ -26,6 +26,16 @@
         />
       </a>
     </section>
+    ## using JS widget
+    <script type="text/javascript" src="https://cdn.statuspage.io/se-v2.js"></script>
+    <script>
+      var sp = new StatusPage.page({ page : '0f54fx204jpt' });
+        sp.status({
+    success : function(data) {
+      console.log(data.status.indicator);
+    }
+  });
+</script>
     <script
       src="https://betteruptime.com/widgets/announcement.js"
       data-id="147975"
