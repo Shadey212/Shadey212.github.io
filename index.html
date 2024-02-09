@@ -49,7 +49,33 @@
 
 </div>
 
-    <script src="https://uptime.betterstack.com/widgets/announcement.js" data-id="142566" async="async" type="text/javascript"></script>
+<script>
+// Function to reset announcement visibility
+function resetAnnouncementDisplay() {
+    // For localStorage
+    try {
+        if (localStorage.getItem('announcementShown') !== null) {
+            localStorage.removeItem('announcementShown'); // Adjust the key as needed
+            // localStorage.setItem('announcementShown', 'false'); // Alternatively, reset its value
+        }
+    } catch (e) {
+        console.error("Error accessing localStorage", e);
+    }
+    
+    // For cookies
+    try {
+        document.cookie = "announcementClosed=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;"; // Adjust the cookie name as needed
+        // document.cookie = "announcementClosed=false; path=/;"; // Alternatively, reset its value
+    } catch (e) {
+        console.error("Error manipulating cookies", e);
+    }
+}
+
+// Call the reset function before the widget script loads
+resetAnnouncementDisplay();
+</script>
+<!-- Announcement widget script follows the reset logic -->
+<script src="https://uptime.betterstack.com/widgets/announcement.js" data-id="142566" async="async" type="text/javascript"></script>
 
   </body>
 </html>
